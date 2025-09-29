@@ -71,7 +71,7 @@ const Home=()=> {
               {
                 icon: FiTarget,
                 title: 'Message Construction Mastery',
-                description: 'Craft clear,department-specific communications that serve their intended purpose'
+                description: 'Craft clear, department-specific communications that serve their intended purpose'
               },
               {
                 icon: FiUsers,

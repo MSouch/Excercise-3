@@ -28,15 +28,15 @@ export const AuthProvider = ({ children }) => {
     setLoading(false)
   }, [])
 
-  const registerUser = (fullName, email) => {
+  const registerUser = (fullName, email = null) => {
     const userData = {
       id: `user_${Date.now()}`,
       full_name: fullName,
-      email: email,
+      email: email || null,
       created_at: new Date().toISOString(),
       user_metadata: {
         full_name: fullName,
-        email: email
+        email: email || null
       }
     }
 

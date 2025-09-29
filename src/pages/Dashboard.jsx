@@ -30,10 +30,10 @@ const Dashboard=()=> {
   }
 
   const challenges=[
-    {id: 1,title: 'The Friday Afternoon Crisis',description: 'Emergency purchase classification and verification',path: '/challenge/1'},
-    {id: 2,title: 'The Documentation Dilemma',description: 'Technical procurement package development',path: '/challenge/2'},
-    {id: 3,title: 'The Stakeholder Standoff',description: 'Stakeholder management and collaborative solutions',path: '/challenge/3'},
-    {id: 4,title: 'The Discovery Crisis',description: 'Crisis procurement decision framework',path: '/challenge/4'}
+  {id: 1,title: 'The Friday Afternoon Crisis',description: 'Emergency purchase classification and verification',path: '/challenge/1'},
+  {id: 2,title: 'The Documentation Dilemma',description: 'Technical procurement package development',path: '/challenge/2'},
+  {id: 3,title: 'The Stakeholder Standoff',description: 'Stakeholder management and collaborative solutions',path: '/challenge/3'},
+  {id: 4,title: 'The Discovery Crisis',description: 'Crisis procurement decision framework',path: '/challenge/4'}
   ]
 
   const getChallengeStatus=(challengeId)=> {
@@ -114,11 +114,11 @@ const Dashboard=()=> {
           transition={{duration: 0.5}}
         >
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            Welcome back,{user?.user_metadata?.full_name || user?.full_name || user?.email}
+            Welcome back, {user?.user_metadata?.full_name || user?.full_name || 'Participant'}
           </h1>
-          <p className="text-gray-600">
-            Complete challenges in sequence to unlock the next level
-          </p>
+              <p className="text-gray-600">
+                Complete each challenge in order to unlock the next one
+              </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

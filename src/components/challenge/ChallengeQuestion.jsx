@@ -93,7 +93,11 @@ const ChallengeQuestion = ({challenge, onComplete}) => {
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-4">
-            {Object.entries(challenge.options).map(([key, option]) => (
+            {[['A','B','C','D']
+              .filter(k => k in challenge.options)
+              .map(k => [k, challenge.options[k]])]
+              .flat()
+              .map(([key, option]) => (
               <motion.div
                 key={key}
                 className={`border-2 rounded-lg p-4 cursor-pointer transition-all ${

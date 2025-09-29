@@ -2,7 +2,7 @@ export const exerciseContent = {
   1: {
     id: 1,
     title: "Emergency Communication Matrix",
-    description: "Create a communication matrix for the emergency shutdown scenario:",
+  description: "Create a communication matrix for the emergency shutdown scenario.",
     fields: [
       {
         id: 'engineering_info',
@@ -118,7 +118,7 @@ export const exerciseContent = {
   2: {
     id: 2,
     title: "Stakeholder Analysis Worksheet",
-    description: "Analyze the underlying needs and constraints for each project stakeholder:",
+  description: "Analyze the underlying needs and constraints for each project stakeholder.",
     fields: [
       {
         id: 'alpha_position',
@@ -226,7 +226,7 @@ export const exerciseContent = {
   3: {
     id: 3,
     title: "Multi-Layer Communication Design",
-    description: "Design a layered communication strategy for the control system implementation:",
+  description: "Design a layered communication strategy for the control system implementation.",
     fields: [
       {
         id: 'executive_summary',
@@ -310,7 +310,7 @@ export const exerciseContent = {
   4: {
     id: 4,
     title: "Comprehensive Communication Strategy Design",
-    description: "Design your integrated communication and change management strategy:",
+  description: "Design your integrated communication and change management strategy.",
     fields: [
       {
         id: 'stakeholder_framework',
