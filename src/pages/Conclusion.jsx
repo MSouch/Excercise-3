@@ -27,7 +27,7 @@ const SIMULATION_CONFIG = {
   
   // Share Text Configuration
   shareText: {
-    message: 'I just earned the Communication Navigator Digital Credential! 🏆',
+    message: 'I just completed the Communication Navigator simulation and earned the Communication Navigator Expert certificate!',
     hashtags: '#Communication #Leadership #ProfessionalDevelopment',
     url: 'https://ap-networks.com/learning-systems'
   },
@@ -137,14 +137,32 @@ const Conclusion = () => {
     })
   }
 
-  const copyShareText = () => {
+  const copyShareText = async () => {
     const shareText = `${SIMULATION_CONFIG.shareText.message}\n\n${SIMULATION_CONFIG.shareText.hashtags}`
+    
     try {
-      navigator.clipboard.writeText(shareText)
+      // Try modern Clipboard API first
+      await navigator.clipboard.writeText(shareText)
       setCopiedShareText(true)
       setTimeout(() => setCopiedShareText(false), 2000)
     } catch (err) {
-      alert(shareText)
+      // Fallback for browsers that don't support Clipboard API
+      try {
+        const textarea = document.createElement('textarea')
+        textarea.value = shareText
+        textarea.style.position = 'fixed'
+        textarea.style.opacity = '0'
+        document.body.appendChild(textarea)
+        textarea.select()
+        document.execCommand('copy')
+        document.body.removeChild(textarea)
+        
+        setCopiedShareText(true)
+        setTimeout(() => setCopiedShareText(false), 2000)
+      } catch (fallbackErr) {
+        // If both methods fail, show alert
+        alert(shareText)
+      }
     }
   }
 
